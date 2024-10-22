@@ -1451,15 +1451,15 @@ export const email_otp = async (req, res) => {
         port: 587,
         secure: false,
         auth: {
-          user: 'emonabdullah445@gmail.com',
-          pass:'iSkikB-]>eDQ3F5',
+          user: 'tonmoysamoi@gmail.com',
+          pass:'theh cifb ffjc ogil',
         },
       });
     
       const mailOptions = {
         from: {
           name: 'Forget Password',
-          address: 'emonabdullah445@gmail.com',
+          address: 'tonmoysamoi@gmail.com',
         },
         to: email,
         subject: 'Otp Check',
