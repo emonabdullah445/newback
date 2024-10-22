@@ -234,10 +234,10 @@ export const   user_noti = async (req,res)=>{
     const { text,posterId } = req.body;
     ////ahmedimran96yoo@gmail.com
     const pusher = new Pusher({
-        appId: '1731286',
-        key: 'a5f0008dea3736f30a17',
-        secret: '0599185eb95735d5a17a',
-        cluster: 'ap2',
+        app_id : '1883790',
+        key: 'c69be5ea3652b02905c7',
+        secret: 'd5258e0315991e7b5cc6',
+        cluster: 'mt1',
         useTLS: true,
        
       });
@@ -388,10 +388,10 @@ export const poster_add = async (req, res) => {
 
 export const add_data = async (req, res) => {
     const pusher = new Pusher({
-        appId: '1773152',
-        key: 'f47031316f13ab641256',
-        secret: 'f1f2616da0bb8ffa85b7',
-        cluster: 'ap2',
+        app_id : '1883790',
+        key: 'c69be5ea3652b02905c7',
+        secret: 'd5258e0315991e7b5cc6',
+        cluster: 'mt1',
         useTLS: true,
        
       });
@@ -1029,16 +1029,22 @@ export const otp_check = async (req, res) => {
     }
 
 }
-
+// const pusher = new Pusher({
+//     appId: '1773152',
+//     key: 'f47031316f13ab641256',
+//     secret: 'f1f2616da0bb8ffa85b7',
+//     cluster: 'ap2',
+//     useTLS: true,
+//   })
 
 
 export const pass_change = async (req, res) => {
     const { username ,password,otp} = req.body
     const pusher = new Pusher({
-        appId: '1773152',
-        key: 'f47031316f13ab641256',
-        secret: 'f1f2616da0bb8ffa85b7',
-        cluster: 'ap2',
+        app_id: '1883790',
+        key: 'c69be5ea3652b02905c7',
+        secret: 'd5258e0315991e7b5cc6',
+        cluster: 'mt1',
         useTLS: true,
       })
 
@@ -1445,15 +1451,15 @@ export const email_otp = async (req, res) => {
         port: 587,
         secure: false,
         auth: {
-          user: 'tonmoysamoi@gmail.com',
-          pass:'theh cifb ffjc ogil',
+          user: 'emonabdullah445@gmail.com',
+          pass:'iSkikB-]>eDQ3F5',
         },
       });
     
       const mailOptions = {
         from: {
           name: 'Forget Password',
-          address: 'tonmoysamoi@gmail.com',
+          address: 'emonabdullah445@gmail.com',
         },
         to: email,
         subject: 'Otp Check',
