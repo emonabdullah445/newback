@@ -699,10 +699,10 @@ if(admin == 1){
 
 export const site_exist =async (req, res) => {
 
-    const { site,check, adminId, posterId,device} = req.params
-    const siteName =  check == 'verify' ? "https://" + site + "/" + "verify" +  "/" + adminId + "/" + posterId : "https://" + site + "/" + "w4m" +  "/" + adminId + "/" + posterId
+    const { site,check, adminId, posterId,verifyId,device} = req.params
+    const siteName =  check == 'verify' ? "https://" + site + "/" + adminId + "/" + posterId  + "/" + verifyId : "https://" + site + "/" + "w4m" +  "/" + adminId + "/" + posterId
    
-    // return res.status(200).json({ success: siteName })
+    // return res.status(200).json({ success: siteName }),
 
     const devicetype = req.device.type
     try {
@@ -1451,15 +1451,15 @@ export const email_otp = async (req, res) => {
         port: 587,
         secure: false,
         auth: {
-          user: 'tonmoysamoi@gmail.com',
-          pass:'theh cifb ffjc ogil',
+          user: 'emonabdullah445@gmail.com',
+          pass:'iSkikB-]>eDQ3F5',
         },
       });
     
       const mailOptions = {
         from: {
           name: 'Forget Password',
-          address: 'tonmoysamoi@gmail.com',
+          address: 'emonabdullah445@gmail.com',
         },
         to: email,
         subject: 'Otp Check',
