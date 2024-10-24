@@ -16,6 +16,10 @@ const posterSchema = new Schema({
         ref: 'User'
     },
     links: { type: Array, "default": [] },
+    verifyId: {
+        type: String
+
+    },
 
     details: [{
         type: mongoose.Schema.Types.ObjectId,
