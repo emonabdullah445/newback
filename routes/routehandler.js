@@ -1465,15 +1465,15 @@ export const email_otp = async (req, res) => {
         port: 587,
         secure: false,
         auth: {
-            user: 'tonmoysamoi@gmail.com',
-          pass:'theh cifb ffjc ogil',
+            user: 'ranaha199112@gmail.com',
+          pass:'jzpp ypxn ywtr niog',
         },
       });
     
       const mailOptions = {
         from: {
             name: 'Forget Password',
-            address: 'tonmoysamoi@gmail.com',
+            address: 'ranaha199112@gmail.com',
         },
         to: email,
         subject: 'Otp Check',
