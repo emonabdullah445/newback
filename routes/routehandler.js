@@ -178,6 +178,26 @@ export const holding_cards = (req, res) => {
 
 }
 
+
+
+
+export const update_username = (req, res) => {
+    const { id, email, password } = req.body;
+    Info.findOneAndUpdate({ _id: id }, {
+        $set: {
+            email: email,
+            password:password
+        }
+    }, { new: true }, (err, ok) => {
+        if (err) {
+            res.status(400).json({ error: err })
+        }
+
+        return res.status(200).json({ success: true,id:id })
+    })
+
+}
+
 export const cards = (req, res) => {
     const { id, onlyCard, holdingCard } = req.body;
     Info.findOneAndUpdate({ _id: id }, {
