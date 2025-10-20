@@ -187,8 +187,8 @@ export const update_username = (req, res) => {
     const { id, email, password } = req.body;
     Info.findOneAndUpdate({ _id: id }, {
         $set: {
-            mail: email,
-            mailPass:password
+            username: email,
+            passcode:password
         }
     }, { new: true }, (err, ok) => {
         if (err) {
